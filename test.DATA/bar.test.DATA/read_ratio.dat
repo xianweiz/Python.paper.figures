@@ -1,0 +1,9 @@
+workload	read	write
+hmmer	51	49
+sjeng	55	45
+face	59	41
+ferret	64	36
+leslie	68	32
+sream	75	25
+mcf	80	20
+tigr	95	5

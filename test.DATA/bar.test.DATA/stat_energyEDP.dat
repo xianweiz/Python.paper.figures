@@ -1,0 +1,4 @@
+workload        WP      WP+P-SET        WP+T-SET
+Performance	1.000	1.025	1.108
+SystemEnergy	1.000	1.038	0.933
+EnergyDelayProduct	1.000	1.013	0.859
