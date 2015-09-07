@@ -17,7 +17,7 @@ Xianwei Zhang / https://people.cs.pitt.edu/~xianeizhang/
 
 
 Workflow
-============
+----
 - shell file fetches data paths
 	top-level shell file **'\*.sh'** gets data file paths from cfg file **'cfgs/para.cfg'**;
 - shell file scan the specified data path
