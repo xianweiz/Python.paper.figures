@@ -1,11 +1,11 @@
 #!/bin/bash
 
 #-- directory of cfg files
-CFG_DIR="./cfgs"
+CFG_DIR="../cfgs"
 #-- directory of python files
-PY_DIR="./pythons"
+PY_DIR="../pythons"
 
-. $CFG_DIR/para.cfg #-- path file
+. $CFG_DIR/para.test.cfg #-- path file
 
 line_CFG_DIR=$line_DATA_DIR
 
@@ -30,5 +30,5 @@ do
 		python $PY_DIR/usual_line.py $data $line_CFG_DIR/usual_line.cfg "access line figure"
 	fi
 
-	[ -f ${data}.eps ] && `epstopdf ${data}.eps && rm ${data}.eps`
+	[ -f ${data}.eps ] && `$EPS2PDF ${data}.eps && rm ${data}.eps`
 done

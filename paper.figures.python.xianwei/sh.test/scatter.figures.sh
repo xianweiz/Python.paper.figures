@@ -1,11 +1,11 @@
 #!/bin/bash
 
 #-- directory of cfg files
-CFG_DIR="./cfgs"
+CFG_DIR="../cfgs"
 #-- directory of python files
-PY_DIR="./pythons"
+PY_DIR="../pythons"
 
-. $CFG_DIR/para.cfg #-- path file
+. $CFG_DIR/para.test.cfg #-- path file
 
 scatter_CFG_DIR=$scatter_DATA_DIR
 
@@ -17,5 +17,5 @@ do
 		echo $data
 		python $PY_DIR/scatter.py $data $scatter_CFG_DIR/scatter.cfg "memory comp figure"
 	fi
-	[ -f ${data}.eps ] && `epstopdf ${data}.eps && rm ${data}.eps`
+	[ -f ${data}.eps ] && `$EPS2PDF ${data}.eps && rm ${data}.eps`
 done

@@ -1,11 +1,11 @@
 #!/bin/bash
 
 #-- directory of cfg files
-CFG_DIR="./cfgs"
+CFG_DIR="../cfgs"
 #-- directory of python files
-PY_DIR="./pythons"
+PY_DIR="../pythons"
 
-. $CFG_DIR/para.cfg #-- path file
+. $CFG_DIR/para.test.cfg #-- path file
 
 log_line_CFG_DIR=$log_line_DATA_DIR
 
@@ -18,5 +18,5 @@ do
 		python $PY_DIR/log_line.py $data $log_line_CFG_DIR/log_line.cfg "ret prob figure"
 	fi
 	
-	[ -f ${data}.eps ] && `epstopdf ${data}.eps && rm ${data}.eps`
+	[ -f ${data}.eps ] && `$EPS2PDF ${data}.eps && rm ${data}.eps`
 done

@@ -1,11 +1,11 @@
 #!/bin/bash
 
 #-- directory of cfg files
-CFG_DIR="./cfgs"
+CFG_DIR="../cfgs"
 #-- directory of python files
-PY_DIR="./pythons"
+PY_DIR="../pythons"
 
-. $CFG_DIR/para.cfg #-- path file
+. $CFG_DIR/para.test.cfg #-- path file
 
 y2_CFG_DIR=$y2_DATA_DIR
 
@@ -24,5 +24,5 @@ do
         python $PY_DIR/y2.py $data $y2_CFG_DIR/y2.cfg "fixratio figure"
 	fi
 
-	[ -f ${data}.eps ] && `epstopdf ${data}.eps && rm ${data}.eps`
+	[ -f ${data}.eps ] && `$EPS2PDF ${data}.eps && rm ${data}.eps`
 done

@@ -1,11 +1,11 @@
 #!/bin/bash
 
 #-- directory of cfg files
-CFG_DIR="./cfgs"
+CFG_DIR="../cfgs"
 #-- directory of python files
-PY_DIR="./pythons/stacked"
+PY_DIR="../pythons/stacked"
 
-. $CFG_DIR/para.cfg #-- path file
+. $CFG_DIR/para.test.cfg #-- path file
 
 stacked_CFG_DIR=$stacked_DATA_DIR
 
@@ -36,5 +36,5 @@ do
 		python $PY_DIR/stacked_2.py $data $stacked_CFG_DIR/stacked.cfg "write 4scheme3case figure - type2"
 	fi
 
-	[ -f ${data}.eps ] && `epstopdf ${data}.eps && rm ${data}.eps`
+	[ -f ${data}.eps ] && `$EPS2PDF ${data}.eps && rm ${data}.eps`
 done

@@ -1,11 +1,11 @@
 #!/bin/bash
 
 #-- directory of cfg files
-CFG_DIR="./cfgs"
+CFG_DIR="../cfgs"
 #-- directory of python files
-PY_DIR="./pythons/func"
+PY_DIR="../pythons/func"
 
-. $CFG_DIR/para.cfg #-- path file
+. $CFG_DIR/para.test.cfg #-- path file
 
 func_CFG_DIR=$func_DATA_DIR
 
@@ -26,5 +26,5 @@ do
 		python $PY_DIR/${func_name}.py $func_data $func_CFG_DIR/${func_name}.cfg "${func_name} figure"
 	fi
 
-	[ -f ${func_data}.eps ] && `epstopdf ${func_data}.eps && rm ${func_data}.eps`
+	[ -f ${func_data}.eps ] && `$EPS2PDF ${func_data}.eps && rm ${func_data}.eps`
 done
